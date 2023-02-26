@@ -1,7 +1,5 @@
 from tkinter import messagebox
-from tkinter import PhotoImage
 
-import os
 import customtkinter as ctk
 import matplotlib.pyplot as pyplot
 import networkx
@@ -72,9 +70,6 @@ class App(ctk.CTk):
         self.title("DFA Simulator")
         self.geometry("500x800")
         self.resizable(False, True)
-        self.dirname = os.path.dirname(__file__)
-        self.icon = PhotoImage(file=os.path.join(self.dirname, "assets", "icon.png"))
-        self.wm_iconphoto(True, self.icon)
         frame = ctk.CTkFrame(master=self)
         frame.pack(padx=10, pady=10, fill="both", expand=True)
 
